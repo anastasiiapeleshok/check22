@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
-<ns3:modelConfig xsi:type="ns3:ModelConfig" folder="" pauseCalculations="false" entityCode="1" loadPath="check22" entityName="check22" version="31" name="check22" lastUpdated="2024-10-31T17:15:56.095+02:00" lastUpdatedBy="admin" id="admin:MODEL:check22" xmlns:ns6="http://www.modelshop.com/services/account/types" xmlns:ns5="http://www.modelshop.com/datacore/message/types" xmlns:ns8="http://www.modelshop.com/datacore/generator/types" xmlns:ns7="http://www.modelshop.com/datacore/repository/types" xmlns:ns2="http://www.modelshop.com/datacore/view/types" xmlns:ns4="http://www.modelshop.com/services/model/types" xmlns:ns3="http://www.modelshop.com/model/model/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <datalists entityCode="2" entityName="Datalist1" version="19" name="Datalist1" description="" created="2024-10-31T16:56:58.265+02:00" createdBy="admin" lastUpdated="2024-10-31T16:56:58.265+02:00" lastUpdatedBy="admin" id="Datalist1"/>
-    <datalists entityCode="5" entityName="Sheet2" version="31" name="Sheet2" created="2024-10-31T17:15:56.091+02:00" createdBy="admin" lastUpdated="2024-10-31T17:15:56.091+02:00" lastUpdatedBy="admin" id="Sheet2">
+<ns3:modelConfig xsi:type="ns3:ModelConfig" folder="" pauseCalculations="false" entityCode="1" loadPath="check22" entityName="check22" version="43" name="check22" lastUpdated="2024-10-31T17:26:40.981+02:00" lastUpdatedBy="admin" id="admin:MODEL:check22" xmlns:ns6="http://www.modelshop.com/services/account/types" xmlns:ns5="http://www.modelshop.com/datacore/message/types" xmlns:ns8="http://www.modelshop.com/datacore/generator/types" xmlns:ns7="http://www.modelshop.com/datacore/repository/types" xmlns:ns2="http://www.modelshop.com/datacore/view/types" xmlns:ns4="http://www.modelshop.com/services/model/types" xmlns:ns3="http://www.modelshop.com/model/model/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <datalists entityCode="2" entityName="Datalist1" version="34" name="Datalist1" description="" created="2024-10-31T16:56:58.265+02:00" createdBy="admin" lastUpdated="2024-10-31T16:56:58.265+02:00" lastUpdatedBy="admin" id="Datalist1"/>
+    <datalists entityCode="5" entityName="Sheet2" version="34" name="Sheet2" created="2024-10-31T17:15:56.091+02:00" createdBy="admin" lastUpdated="2024-10-31T17:15:56.091+02:00" lastUpdatedBy="admin" id="Sheet2">
         <dataFields type="text" fieldCode="100" rawType="java.lang.String" allowNull="true" name="Value" initialized="true" id="Value"/>
         <dataFields type="text" fieldCode="101" rawType="java.lang.String" allowNull="true" name="Sector" initialized="true" id="Sector"/>
         <dataFields type="text" fieldCode="102" readOnly="true" rawType="java.lang.String" name="sourceName" description="Source name" initialized="true" id="sourceName">
@@ -11,7 +11,7 @@
             <defaultValue source="id"/>
         </dataFields>
     </datalists>
-    <datalists entityCode="4" entityName="Strategy" version="31" name="Strategy" created="2024-10-31T17:15:56.093+02:00" createdBy="admin" lastUpdated="2024-10-31T17:15:56.093+02:00" lastUpdatedBy="admin" id="Strategy">
+    <datalists entityCode="4" entityName="Strategy" version="34" name="Strategy" created="2024-10-31T17:15:56.093+02:00" createdBy="admin" lastUpdated="2024-10-31T17:15:56.093+02:00" lastUpdatedBy="admin" id="Strategy">
         <dataFields type="text" fieldCode="100" rawType="java.lang.String" allowNull="true" name="Name" initialized="true" id="Name"/>
         <dataFields type="text" fieldCode="101" rawType="java.lang.String" allowNull="true" name="Sector" initialized="true" id="Sector"/>
         <dataFields type="text" fieldCode="102" readOnly="true" rawType="java.lang.String" name="sourceName" description="Source name" initialized="true" id="sourceName">
@@ -21,10 +21,12 @@
             <defaultValue source="id"/>
         </dataFields>
     </datalists>
+    <datalists entityCode="6" entityName="Datalist3" version="39" name="Datalist3" description="" created="2024-10-31T17:26:39.257+02:00" createdBy="admin" lastUpdated="2024-10-31T17:26:39.257+02:00" lastUpdatedBy="admin" id="Datalist3"/>
     <views allColumns="true" default="true" modelView="true" entityName="check22" name="check22" description="Default view for list check22" id="check22"/>
     <views allColumns="true" default="true" entityName="Datalist1" name="Datalist1" description="Default view for list Datalist1" id="Datalist1"/>
     <views allColumns="true" default="true" entityName="Sheet2" name="Sheet2" description="Default view for list Sheet2" id="Sheet2"/>
     <views allColumns="true" default="true" entityName="Strategy" name="Strategy" description="Default view for list Strategy" id="Strategy"/>
+    <views allColumns="true" default="true" entityName="Datalist3" name="Datalist3" description="Default view for list Datalist3" id="Datalist3"/>
     <connectors layoutDetected="true" entityName="Sheet2" version="31" name="Sheet2" created="2024-10-31T17:15:56.093+02:00" createdBy="admin" lastUpdated="2024-10-31T17:15:56.093+02:00" lastUpdatedBy="admin" id="Sheet2">
         <connectorFields columnIndex="0" ignore="false" mapField="Value" type="text" rawType="String" allowNull="true" name="Value" id="Value"/>
         <connectorFields columnIndex="1" ignore="false" mapField="Sector" type="text" rawType="String" allowNull="true" name="Sector" id="Sector"/>
@@ -60,6 +62,6 @@
         </mediaConfig>
     </connectors>
     <extra name="ModelCanvasCoordinates" description="Coordinates for ModelCanvasCoordinates" id="ModelCanvasCoordinates">
-        <body>{"DATALIST:Datalist1":{"x":0,"y":0},"DATALIST:Datalist2":{"x":57,"y":-46}}</body>
+        <body>{"DATALIST:Datalist1":{"x":0,"y":0},"DATALIST:Datalist2":{"x":57,"y":-46},"CONNECTOR:Strategy":{"x":-646,"y":-121},"DATALIST:Sheet2":{"x":-48,"y":232},"DATALIST:Strategy":{"x":-549,"y":-144},"CONNECTOR:Sheet2":{"x":8,"y":313},"DATALIST:Datalist3":{"x":-976,"y":108}}</body>
     </extra>
 </ns3:modelConfig>
