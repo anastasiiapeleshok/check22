@@ -1,8 +1,54 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
-<ns3:modelConfig xsi:type="ns3:ModelConfig" folder="" pauseCalculations="false" entityCode="1" loadPath="check22" entityName="check22" version="101" name="check22" lastUpdated="2024-11-01T09:32:32.570+02:00" lastUpdatedBy="admin" id="admin:MODEL:check22" xmlns:ns6="http://www.modelshop.com/services/account/types" xmlns:ns5="http://www.modelshop.com/datacore/message/types" xmlns:ns8="http://www.modelshop.com/datacore/generator/types" xmlns:ns7="http://www.modelshop.com/datacore/repository/types" xmlns:ns2="http://www.modelshop.com/datacore/view/types" xmlns:ns4="http://www.modelshop.com/services/model/types" xmlns:ns3="http://www.modelshop.com/model/model/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ns3:modelConfig xsi:type="ns3:ModelConfig" folder="" pauseCalculations="false" entityCode="1" loadPath="check22" entityName="check22" version="113" name="check22" lastUpdated="2024-11-01T09:34:19.420+02:00" lastUpdatedBy="admin" id="admin:MODEL:check22" xmlns:ns6="http://www.modelshop.com/services/account/types" xmlns:ns5="http://www.modelshop.com/datacore/message/types" xmlns:ns8="http://www.modelshop.com/datacore/generator/types" xmlns:ns7="http://www.modelshop.com/datacore/repository/types" xmlns:ns2="http://www.modelshop.com/datacore/view/types" xmlns:ns4="http://www.modelshop.com/services/model/types" xmlns:ns3="http://www.modelshop.com/model/model/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <datalists entityCode="9" entityName="MAINDATALIST" version="99" name="MAINDATALIST" description="" created="2024-11-01T09:32:32.570+02:00" createdBy="admin" lastUpdated="2024-11-01T09:32:32.570+02:00" lastUpdatedBy="admin" id="MAINDATALIST"/>
+    <datalists entityCode="11" entityName="Sheet2" version="113" name="Sheet2" created="2024-11-01T09:34:19.419+02:00" createdBy="admin" lastUpdated="2024-11-01T09:34:19.419+02:00" lastUpdatedBy="admin" id="Sheet2">
+        <dataFields type="text" fieldCode="100" rawType="java.lang.String" allowNull="true" name="Value" initialized="true" id="Value"/>
+        <dataFields type="text" fieldCode="101" rawType="java.lang.String" allowNull="true" name="Sector" initialized="true" id="Sector"/>
+    </datalists>
+    <datalists entityCode="10" entityName="Strategy" version="113" name="Strategy" created="2024-11-01T09:34:19.420+02:00" createdBy="admin" lastUpdated="2024-11-01T09:34:19.420+02:00" lastUpdatedBy="admin" id="Strategy">
+        <dataFields type="text" fieldCode="100" rawType="java.lang.String" allowNull="true" name="Name" initialized="true" id="Name"/>
+        <dataFields type="text" fieldCode="101" rawType="java.lang.String" allowNull="true" name="Sector" initialized="true" id="Sector"/>
+        <dataFields type="text" fieldCode="102" readOnly="true" rawType="java.lang.String" name="sourceName" description="Source name" initialized="true" id="sourceName">
+            <defaultValue source="'Manual Entry'"/>
+        </dataFields>
+        <dataFields type="integer" fieldCode="103" readOnly="true" rawType="java.lang.Long" name="lineNumber" description="Source line number" initialized="true" id="lineNumber">
+            <defaultValue source="id"/>
+        </dataFields>
+    </datalists>
     <views allColumns="true" default="true" modelView="true" entityName="check22" name="check22" description="Default view for list check22" id="check22"/>
     <views allColumns="true" default="true" entityName="MAINDATALIST" name="MAINDATALIST" description="Default view for list MAINDATALIST" id="MAINDATALIST"/>
+    <views allColumns="true" default="true" entityName="Sheet2" name="Sheet2" description="Default view for list Sheet2" id="Sheet2"/>
+    <views allColumns="true" default="true" entityName="Strategy" name="Strategy" description="Default view for list Strategy" id="Strategy"/>
+    <connectors layoutDetected="true" entityName="Sheet2" version="113" name="Sheet2" created="2024-11-01T09:34:19.419+02:00" createdBy="admin" lastUpdated="2024-11-01T09:34:19.419+02:00" lastUpdatedBy="admin" id="Sheet2">
+        <dataSource>
+            <fileSource>
+                <dataSourceRefs>test.xlsx</dataSourceRefs>
+            </fileSource>
+            <loadFilter/>
+        </dataSource>
+        <mediaConfig connectorMediaType="excel">
+            <excelMedia>
+                <component componentType="excelworksheet" componentId="rId2" componentName="Sheet2" displayName="Sheet2"/>
+            </excelMedia>
+        </mediaConfig>
+    </connectors>
+    <connectors layoutDetected="true" entityName="Strategy" version="113" name="Strategy" created="2024-11-01T09:34:19.420+02:00" createdBy="admin" lastUpdated="2024-11-01T09:34:19.420+02:00" lastUpdatedBy="admin" id="Strategy">
+        <connectorFields columnIndex="0" ignore="false" mapField="Name" type="text" rawType="String" allowNull="true" name="Name" id="Name"/>
+        <connectorFields columnIndex="1" ignore="false" mapField="Sector" type="text" rawType="String" allowNull="true" name="Sector" id="Sector"/>
+        <connectorFields mapField="sourceName" type="text" readOnly="true" rawType="String" name="sourceName" description="Source name" id="sourceName"/>
+        <connectorFields mapField="lineNumber" type="integer" readOnly="true" rawType="Long" name="lineNumber" description="Source line number" id="lineNumber"/>
+        <dataSource connectorUrl="test.xlsx">
+            <fileSource>
+                <dataSourceRefs>test.xlsx</dataSourceRefs>
+            </fileSource>
+            <loadFilter/>
+        </dataSource>
+        <mediaConfig connectorMediaType="excel">
+            <excelMedia>
+                <component componentType="excelworksheet" componentId="rId3" componentName="Strategy" displayName="Strategy"/>
+            </excelMedia>
+        </mediaConfig>
+    </connectors>
     <extra name="ModelCanvasCoordinates" description="Coordinates for ModelCanvasCoordinates" id="ModelCanvasCoordinates">
         <body>{"DATALIST:Datalist1":{"x":0,"y":0},"DATALIST:Datalist2":{"x":57,"y":-46},"CONNECTOR:Strategy":{"x":-646,"y":-121},"DATALIST:Sheet2":{"x":-48,"y":232},"DATALIST:Strategy":{"x":-549,"y":-144},"CONNECTOR:Sheet2":{"x":8,"y":313},"DATALIST:Datalist3":{"x":-976,"y":108},"DATALIST:DataListNotToSave":{"x":927,"y":-27},"DATALIST:To save":{"x":951,"y":-20},"DATALIST:not to save":{"x":527,"y":75},"DATALIST:DATALISTDATAKIST":{"x":532,"y":-44},"DATALIST:MAINDATALIST":{"x":0,"y":0}}</body>
     </extra>
